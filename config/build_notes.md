@@ -10,11 +10,11 @@ It is intended as a quick reference for reproducing the installation without rer
 
 | Component | Status |
 |----------|--------|
-| FLASH Setup | Successful |
-| Compilation | Successful |
-| MPI Support | Enabled |
-| Parallel HDF5 | Enabled |
-| Test Simulation - SedovBlast | Successful |
+| FLASH Setup | ✅ Successful |
+| Compilation | ✅ Successful |
+| MPI Support | ✅ Enabled |
+| Parallel HDF5 | ✅ Enabled |
+| Sedov Test Simulation | ✅ Successful |
 
 ---
 
