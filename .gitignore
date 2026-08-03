@@ -1,0 +1,23 @@
+# R
+.Rhistory
+.RData
+
+# VS Code
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# Linux
+*~
+.DS_Store
+
+# FLASH build artifacts
+*.o
+*.mod
+flash4
+
+# HDF5 outputs (large simulation files)
+*_hdf5_chk_*
+*_hdf5_plt_cnt_*
