@@ -6,7 +6,7 @@
 
 ## About
 
-This repository is a chronological record of my exploration of computational physics.
+This repository is a chronological record of my exploration of computational physics with FLASH.
 
 The objective is not simply to learn a simulation package, but to understand the complete computational research workflow:
 
@@ -73,6 +73,16 @@ Each major milestone including successful simulations, failed attempts, debuggin
 This repository will evolve alongside my research as I develop experience in computational physics and scientific computing.
 
 It aims to document the complete learning process—including challenges, solutions, and insights gained along the way.
+
+---
+
+## Notes
+
+This repository documents my process of learning computational physics with FLASH.
+Some utility scripts were initially developed with AI assistance and have since been
+adapted, tested, and integrated into my workflow. The emphasis of this repository is
+on understanding, reproducibility, and scientific methodology rather than software
+development alone.
 
 ---
 
