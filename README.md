@@ -1,4 +1,4 @@
-# Computational Physics Research Notebook
+# FLASH Physics Research Notebook
 
 > An open laboratory notebook documenting my journey into computational physics—from learning Linux and high-performance computing to developing and analyzing numerical simulations.
 
