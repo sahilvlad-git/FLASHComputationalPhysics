@@ -86,8 +86,16 @@ development alone.
 
 ---
 
-## Disclaimer
-
-This repository does **not** redistribute the FLASH source code.
+## Disclaimer and License
 
 It contains only original documentation, analysis scripts, configuration files, and notes developed as part of my learning and research.
+
+* **Repository License:** The original analysis code, documentation, and utility scripts in this repository are available under the [MIT License].
+* **FLASH Code:** This repository does **not** redistribute the FLASH source code. This product includes software developed by and/or derived from the Flash Center for Computational Science (https://flash.rochester.edu) to which the U.S. Government retains certain rights.
+
+## Acknowledgments
+
+The software used in this work was developed in part by the DOE NNSA- and DOE Office of Science-supported Flash Center for Computational Science at the University of Chicago and the University of Rochester.
+
+### Primary Papers
+Please consult the [Flash Center Bibliography](https://flash.rochester.edu/site/publications/flash_pubs.shtml) to identify and cite the specific FLASH papers relevant to your work.

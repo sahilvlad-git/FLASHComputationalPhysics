@@ -19,3 +19,16 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+THIRD-PARTY NOTICE & ATTRIBUTION: FLASH CODE
+
+This repository does not contain or redistribute the FLASH Code source files. 
+
+This project includes software, scripts, configuration files, or analysis workflows 
+developed by and/or derived from the Flash Center for Computational Science 
+(https://flash.rochester.edu) to which the U.S. Government retains certain rights.
+
+Use of the FLASH Code itself is governed by the FLASH License Agreement. 
+For more information, visit https://flash.rochester.edu.
