@@ -1,6 +1,6 @@
 # Common Errors
 
-This document collects the most common issues encountered while installing, compiling, running, and visualizing FLASH simulations.
+This document collects the most common issues encountered while installing, compiling, running, and visualizing my FLASH simulations.
 
 Whenever a new problem is solved, it should be documented here for future reference.
 
