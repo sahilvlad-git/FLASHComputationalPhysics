@@ -4,8 +4,8 @@ This document records the software environment used throughout this project. Rec
 
 ## Operating System
 
-| Component | Version |
-|----------|---------|
+| Component        | Version               |
+| ---------------- | --------------------- |
 | Operating System | Ubuntu 25.xx (64-bit) |
 
 > **Note:** Ubuntu 25 was used throughout this project. Some third-party scientific software (e.g., VisIt) officially provided binaries only for Ubuntu 24, leading to compatibility issues discussed later in the documentation.
@@ -14,10 +14,10 @@ This document records the software environment used throughout this project. Rec
 
 ## Compiler Toolchain
 
-| Software | Version |
-|----------|---------|
-| GCC | 15.2.0 |
-| GNU Fortran | 15.2.0 |
+| Software    | Version |
+| ----------- | ------- |
+| GCC         | 15.2.0  |
+| GNU Fortran | 15.2.0  |
 
 Compiler compatibility required additional configuration because newer GNU Fortran releases perform stricter argument checking than versions commonly used when FLASH 4.8 was developed.
 
@@ -26,8 +26,8 @@ Compiler compatibility required additional configuration because newer GNU Fortr
 ## Parallel Computing
 
 | Software | Version |
-|----------|---------|
-| OpenMPI | 5.0.8 |
+| -------- | ------- |
+| OpenMPI  | 5.0.8   |
 
 FLASH was compiled and executed using MPI support.
 
@@ -35,9 +35,9 @@ FLASH was compiled and executed using MPI support.
 
 ## Data Format Libraries
 
-| Library | Version |
-|---------|---------|
-| HDF5 | Installed through Ubuntu repositories |
+| Library | Version                               |
+| ------- | ------------------------------------- |
+| HDF5    | Installed through Ubuntu repositories |
 
 Parallel HDF5 output was enabled during setup using
 
@@ -49,9 +49,9 @@ Parallel HDF5 output was enabled during setup using
 
 ## Python
 
-| Software | Version |
-|----------|---------|
-| Python | System installation (Ubuntu 25) |
+| Software | Version                         |
+| -------- | ------------------------------- |
+| Python   | System installation (Ubuntu 25) |
 
 Python is used internally by the FLASH setup system.
 
@@ -60,9 +60,9 @@ Python is used internally by the FLASH setup system.
 ## Scientific Software
 
 | Software | Version |
-|----------|---------|
-| FLASH | 4.8 |
-| VisIt | 3.5.0 |
+| -------- | ------- |
+| FLASH    | 4.8     |
+| VisIt    | 3.5.0   |
 
 ---
 
@@ -70,12 +70,12 @@ Python is used internally by the FLASH setup system.
 
 Development and testing were performed on an institutional HPC workstation.
 
-| Component | Details |
-|----------|---------|
-| Architecture | x86_64 |
-| Memory | ~30 GB RAM |
-| Operating System | Ubuntu Linux |
-| MPI Execution | Local multi-core workstation |
+| Component        | Details                      |
+| ---------------- | ---------------------------- |
+| Architecture     | x86_64                       |
+| Memory           | ~30 GB RAM                   |
+| Operating System | Ubuntu Linux                 |
+| MPI Execution    | Local multi-core workstation |
 
 ---
 

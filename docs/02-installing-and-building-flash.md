@@ -8,7 +8,7 @@ The document also serves as a reference for reproducing the build environment on
 
 ---
 
-# System Environment
+## System Environment
 
 The installation was performed on the following workstation.
 
@@ -33,22 +33,22 @@ Unlike many HPC clusters, this workstation did **not** use an Environment Module
 
 ---
 
-# Objectives
+## Objectives
 
 The goals of this stage of the project were:
 
-* Prepare a complete scientific computing environment.
-* Install every dependency required by FLASH.
-* Configure FLASH for the local workstation.
-* Successfully compile the FLASH executable.
-* Run the Sedov Blast Wave verification problem.
-* Generate valid HDF5 output files for visualization.
+- Prepare a complete scientific computing environment.
+- Install every dependency required by FLASH.
+- Configure FLASH for the local workstation.
+- Successfully compile the FLASH executable.
+- Run the Sedov Blast Wave verification problem.
+- Generate valid HDF5 output files for visualization.
 
 Completing these steps would establish a functioning computational physics environment before beginning any custom research simulations.
 
 ---
 
-# 1. Inspecting the Existing Software Environment
+## 1. Inspecting the Existing Software Environment
 
 Before installing any software, the existing environment was inspected to determine which development tools were already available.
 
@@ -72,16 +72,16 @@ This inspection revealed that several essential components required by FLASH wer
 
 Among them were:
 
-* GNU Fortran
-* Git
-* OpenMPI
-* Parallel HDF5 development libraries
+- GNU Fortran
+- Git
+- OpenMPI
+- Parallel HDF5 development libraries
 
 Establishing the software environment first prevented later configuration problems and allowed every dependency to be verified individually.
 
 ---
 
-# Why this step matters
+## Why this step matters
 
 FLASH is a large multiphysics simulation framework written primarily in **Fortran**, with portions written in **C** and **C++**. Building the software therefore requires considerably more than a standard C compiler.
 
@@ -101,7 +101,7 @@ Without any one of these components, the FLASH build would eventually fail.
 
 ---
 
-# 2. Installing the Required Development Tools
+## 2. Installing the Required Development Tools
 
 The Ubuntu package database was first updated.
 
@@ -127,21 +127,21 @@ sudo apt install \
 
 This installation supplied several important utilities, including:
 
-* mpicc
-* mpicxx
-* mpif90
-* mpifort
-* mpiexec
-* mpirun
-* h5pcc
-* h5pfc
-* h5dump
+- mpicc
+- mpicxx
+- mpif90
+- mpifort
+- mpiexec
+- mpirun
+- h5pcc
+- h5pfc
+- h5dump
 
 These programs form the backbone of the FLASH build system.
 
 ---
 
-# Verifying the HDF5 Installation
+## Verifying the HDF5 Installation
 
 After installation, the HDF5 configuration was verified.
 
@@ -157,17 +157,17 @@ h5dump --version
 
 The configuration output confirmed that the installed HDF5 library supported:
 
-* Parallel I/O
-* MPI
-* High-level HDF5 APIs
-* C interface
-* Fortran interface
+- Parallel I/O
+- MPI
+- High-level HDF5 APIs
+- C interface
+- Fortran interface
 
 This was important because FLASH performs all checkpointing and visualization output through HDF5.
 
 ---
 
-# Insight
+## Insight
 
 Ubuntu provides both **serial** and **parallel** versions of HDF5.
 
@@ -185,7 +185,7 @@ Understanding this distinction is useful because many scientific codes silently 
 
 ---
 
-# 3. Creating the FLASH Workspace
+## 3. Creating the FLASH Workspace
 
 A dedicated project directory was created.
 
@@ -219,7 +219,7 @@ Keeping the project inside its own workspace made it easier to maintain auxiliar
 
 ---
 
-# 4. Inspecting the FLASH Setup Utility
+## 4. Inspecting the FLASH Setup Utility
 
 Before attempting any compilation, the setup script was tested.
 
@@ -240,7 +240,7 @@ Despite the warnings, the setup utility executed correctly and displayed the exp
 
 ---
 
-# Insight
+## Insight - 4
 
 One of the most important lessons learned during installation was distinguishing **warnings** from **errors**.
 
@@ -254,7 +254,7 @@ Learning to identify harmless warnings avoids spending unnecessary time attempti
 
 ---
 
-# 5. Exploring the Available Simulation Problems
+## 5. Exploring the Available Simulation Problems
 
 Before compiling FLASH, the available applications supplied with the distribution were inspected.
 
@@ -264,31 +264,31 @@ ls source/Simulation/SimulationMain
 
 The source tree contained numerous benchmark and validation problems, including:
 
-* Sedov Blast Wave
-* Sod Shock Tube
-* Double Mach Reflection
-* Kelvin–Helmholtz Instability
-* Rayleigh–Taylor Instability
-* Jeans Collapse
-* Wind Tunnel
-* Magnetohydrodynamic examples
-* Plasma simulations
+- Sedov Blast Wave
+- Sod Shock Tube
+- Double Mach Reflection
+- Kelvin–Helmholtz Instability
+- Rayleigh–Taylor Instability
+- Jeans Collapse
+- Wind Tunnel
+- Magnetohydrodynamic examples
+- Plasma simulations
 
 Among these, the **Sedov Blast Wave** problem was selected as the first benchmark.
 
 This problem is widely used for validating hydrodynamics codes because it exercises several core FLASH capabilities simultaneously:
 
-* Hydrodynamic solver
-* Adaptive Mesh Refinement (AMR)
-* Equation of State
-* HDF5 output
-* Checkpoint generation
+- Hydrodynamic solver
+- Adaptive Mesh Refinement (AMR)
+- Equation of State
+- HDF5 output
+- Checkpoint generation
 
 Successfully running the Sedov benchmark provides strong evidence that the installation has been completed correctly.
 
 ---
 
-# 6. Creating a Machine-Specific Build Configuration
+## 6. Creating a Machine-Specific Build Configuration
 
 FLASH separates machine-dependent compiler settings from the scientific source code through **site configurations** stored inside the `sites` directory.
 
@@ -305,7 +305,7 @@ This approach preserved the original FLASH configuration while allowing the work
 
 ---
 
-# Insight
+## Insight - 6
 
 Separating machine configuration from scientific source code is one of FLASH's strongest design choices.
 
@@ -319,7 +319,7 @@ Yes. The next section is the heart of the installation process—the actual comp
 
 ---
 
-# 7. Configuring the Sedov Blast Wave Simulation
+## 7. Configuring the Sedov Blast Wave Simulation
 
 With the build environment prepared, the FLASH setup utility was used to configure the standard Sedov Blast Wave verification problem.
 
@@ -348,7 +348,7 @@ This significantly reduces compilation time while keeping the original source tr
 
 ---
 
-# The Generated Object Directory
+## The Generated Object Directory
 
 After setup completed successfully, the generated directory contained files similar to:
 
@@ -372,7 +372,7 @@ This design allows multiple FLASH simulations to coexist simultaneously without 
 
 ---
 
-# Insight
+## Insight - 7
 
 One of the design philosophies of FLASH is that **simulation setup and code compilation are separate processes.**
 
@@ -386,7 +386,7 @@ This separation provides tremendous flexibility, allowing entirely different phy
 
 ---
 
-# 8. Beginning the Compilation
+## 8. Beginning the Compilation
 
 Compilation was started from inside the generated build directory.
 
@@ -403,7 +403,7 @@ The failures were not related to missing software packages but rather to changes
 
 ---
 
-# Compiler Errors with GCC 15
+## Compiler Errors with GCC 15
 
 The workstation used GCC and GNU Fortran version **15.2**, considerably newer than the compiler versions commonly used when FLASH 4.8 was originally developed.
 
@@ -415,7 +415,7 @@ Although these constructs had historically been accepted by older compilers, GNU
 
 ---
 
-# Investigating the Compiler
+## Investigating the Compiler
 
 Rather than immediately modifying FLASH source code, the compiler capabilities were investigated.
 
@@ -435,7 +435,7 @@ This compiler flag restores the more permissive argument checking behavior expec
 
 ---
 
-# Why This Option Exists
+## Why This Option Exists
 
 Large scientific software packages often remain under active development for decades.
 
@@ -449,7 +449,7 @@ In this case, the issue arose from compiler compatibility rather than an error i
 
 ---
 
-# 9. Updating the Build Configuration
+## 9. Updating the Build Configuration
 
 Instead of modifying FLASH source files, the workstation-specific compiler configuration was updated.
 
@@ -465,7 +465,7 @@ Keeping the modification confined to the machine configuration preserved the int
 
 ---
 
-# Insight
+## Insight - 8 & 9
 
 A key principle followed throughout this project was to avoid altering scientific source code whenever possible.
 
@@ -475,7 +475,7 @@ Maintaining a clean source tree greatly simplifies future updates and allows the
 
 ---
 
-# 10. Successful Compilation
+## 10. Successful Compilation
 
 After updating the compiler configuration, the build process was repeated.
 
@@ -504,7 +504,7 @@ This marked the first successful compilation of FLASH on the workstation.
 
 ---
 
-# Verifying the Executable
+## Verifying the Executable
 
 The executable was inspected using standard Linux utilities.
 
@@ -526,7 +526,7 @@ The `file` utility further confirmed that the binary was a valid **64-bit ELF ex
 
 ---
 
-# Insight
+## Insight - 10
 
 One lesson learned during compilation was that a large number of warnings does **not** necessarily indicate failure.
 

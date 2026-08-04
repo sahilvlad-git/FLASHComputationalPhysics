@@ -6,23 +6,23 @@ It is intended as a quick reference for reproducing the installation without rer
 
 ---
 
-# Build Summary
+## Build Summary
 
-| Component | Status |
-|----------|--------|
-| FLASH Setup | ✅ Successful |
-| Compilation | ✅ Successful |
-| MPI Support | ✅ Enabled |
-| Parallel HDF5 | ✅ Enabled |
+| Component             | Status        |
+| --------------------- | ------------- |
+| FLASH Setup           | ✅ Successful |
+| Compilation           | ✅ Successful |
+| MPI Support           | ✅ Enabled    |
+| Parallel HDF5         | ✅ Enabled    |
 | Sedov Test Simulation | ✅ Successful |
 
 ---
 
-# Compiler Compatibility
+## Compiler Compatibility
 
 FLASH 4.8 was compiled using
 
-```
+```text
 GNU Fortran 15.2
 ```
 
@@ -40,7 +40,7 @@ This preserved the original FLASH source code while restoring compatibility with
 
 ---
 
-# Build Configuration
+## Build Configuration
 
 Simulation setup command:
 
@@ -62,7 +62,7 @@ mpirun -np 4 ./flash4
 
 ---
 
-# Important Observations
+## Important Observations
 
 - Numerous compiler warnings were produced during compilation.
 - Despite the warnings, the build completed successfully.
@@ -71,7 +71,7 @@ mpirun -np 4 ./flash4
 
 ---
 
-# Output Verification
+## Output Verification
 
 Successful execution produced:
 
@@ -89,7 +89,7 @@ These outputs confirmed that:
 
 ---
 
-# Visualization Notes
+## Visualization Notes
 
 VisIt 3.5.0 was selected as the primary visualization software because it is the package recommended throughout the FLASH User Guide.
 
@@ -99,7 +99,7 @@ These issues are documented separately in the visualization documentation.
 
 ---
 
-# Lessons Learned
+## Lessons Learned
 
 - Prefer fixing build issues through compiler configuration rather than modifying FLASH source code.
 - Keep machine-specific changes isolated inside the site configuration.
@@ -109,4 +109,6 @@ These issues are documented separately in the visualization documentation.
 
 ---
 
-_Last updated: August 2026_
+## Last updated: August 2026
+
+---
