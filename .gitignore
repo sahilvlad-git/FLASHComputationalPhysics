@@ -3,7 +3,9 @@
 .RData
 
 # VS Code
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
 
 # Python
 __pycache__/
