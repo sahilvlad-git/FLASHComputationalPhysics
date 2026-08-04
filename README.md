@@ -28,8 +28,7 @@ The project begins with the **FLASH** multiphysics simulation framework and will
 - Understand adaptive mesh refinement (AMR)
 - Build a reproducible simulation workflow
 - Develop scientific visualization skills
-- Explore numerical approaches for transport phenomena
-- Progress toward independent computational physics research
+- Explore numerical approaches for scientific computing
 
 ---
 
@@ -64,7 +63,10 @@ Each major milestone including successful simulations, failed attempts, debuggin
 - [x] Sedov benchmark simulation
 - [x] Initial HDF5 data inspection
 - [x] Initial AMR exploration
-- [ ] Robust visualization workflow
+- [X] Robust visualization workflow
+- [X] 2D Sedov setup & compilation
+- [ ] 3D Sedov setup & compilation (-3d flag)
+- [ ] 3D volumetric simulation & ParaView rendering
 
 ---
 
